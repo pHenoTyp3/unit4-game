@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div id="computerguess"></div>
+    <div id="choices"></div>
+    
+</body>
+<script>
+    var lettersArr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    var letterpicked = lettersArr[Math.floor(Math.random()*lettersArr.length)] 
+    console.log(letterpicked)
+    for(var i = 0; i < lettersArr.length; i++){
+        letterchoices = $("<button>")
+        letterchoices.text(lettersArr[i])
+      $("#choices").append(letterchoices)
+      choose = letterchoices
+      console.log(choose)
+     
+
+    }
+    $("#computerguess").text(letterpicked)
+    
+      $("#choices").on("click",function(){
+        console.log("true")
+    })
+
+    // document.onkeyup = function(x){
+    //     var userinput = x.key
+    //     console.log(userinput)
+
+       
+    // }
+
+   
+</script>
+
+</html>
+
+
